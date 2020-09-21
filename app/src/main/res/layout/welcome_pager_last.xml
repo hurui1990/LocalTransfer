@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/welcome_background" >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/user_guide_3" />
+    
+
+    <Button
+        android:id="@+id/btn_lastPager_start"
+        android:layout_width="wrap_content"
+        android:layout_height="36dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="51dip"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip"
+        android:layout_centerHorizontal="true"
+        android:background="#1181b5"
+        android:alpha="0.7"
+        android:text="开始分享"
+        android:textColor="@android:color/white"
+        android:textSize="14sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="106dip"
+        android:layout_marginLeft="30dip"
+        android:layout_marginRight="30dip"
+        android:gravity="center"
+        android:text="群发,群收 立刻分享!"
+        android:textColor="@android:color/white"
+        android:alpha="0.7"
+        android:textSize="16sp" />
+    
+
+
+</RelativeLayout>

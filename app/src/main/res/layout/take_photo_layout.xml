@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="end"
+    android:padding="20dp"
+    android:background="@drawable/create_join_dialog_bg"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="你想用什么资源?"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:singleLine="false" />
+
+    <TextView
+        android:id="@+id/from_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:text="去拍照"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/from_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:gravity="center_vertical|right"
+        android:text="从相册选取"
+        android:textSize="14sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

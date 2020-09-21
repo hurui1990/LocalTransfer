@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/welcomePager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="0dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="12dip"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio_btn_first"
+            android:layout_width="14dip"
+            android:layout_height="14dip"
+            android:padding="3dip"
+            android:background="@drawable/img_page_indicator"
+            android:button="@android:color/transparent" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_second"
+            android:layout_width="14dip"
+            android:layout_height="14dip"
+            android:layout_marginLeft="17dip"
+            android:layout_marginRight="17dip"
+            android:padding="3dip"
+            android:background="@drawable/img_page_indicator"
+            android:button="@android:color/transparent" />
+
+        <RadioButton
+            android:id="@+id/radio_btn_third"
+            android:layout_width="14dip"
+            android:layout_height="14dip"
+            android:padding="3dip"
+            android:background="@drawable/img_page_indicator"
+            android:button="@android:color/transparent" />
+    </RadioGroup>
+
+</RelativeLayout>
