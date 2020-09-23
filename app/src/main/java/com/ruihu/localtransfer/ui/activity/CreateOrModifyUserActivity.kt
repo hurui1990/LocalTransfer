@@ -50,7 +50,6 @@ class CreateOrModifyUserActivity : BaseActivity(), View.OnClickListener{
     private var userSP by SharePreferenceDelegate("user", "")
     private var dialog : Dialog? = null
     private var photoFile : File? = null
-    private val permissions by lazy { permissionMap[this.javaClass.name]!! }
 
     override fun getLayoutId(): Int {
         return R.layout.activity_create_or_modify_user
@@ -102,6 +101,7 @@ class CreateOrModifyUserActivity : BaseActivity(), View.OnClickListener{
             val user = Gson().fromJson<User>(userSP)
             with(user){
                 mPosition = position
+                avaterStr = avater
                 if (position in 0..8){
                     avater_select_img.imageResource = userInfoIcons[position]
                 }else if (position == 9){

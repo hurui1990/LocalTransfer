@@ -1,22 +1,17 @@
 package com.ruihu.rh_base.ui
 
 import android.Manifest
-import android.app.Activity
-import android.content.Context
-import android.content.pm.PackageManager
 import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.os.Handler
-import android.util.Log
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.PermissionChecker
-import com.ruihu.rh_base.util.PermissionUtil
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
+import kotlin.system.exitProcess
 
 
 /**
@@ -26,22 +21,21 @@ abstract class BaseActivity : AppCompatActivity() {
 
     private var isExit: Boolean = false
 
-    protected val permissionMap  by lazy { hashMapOf(
+    private val permissionMap  by lazy { hashMapOf(
         "com.ruihu.localtransfer.ui.activity.CreateOrModifyUserActivity" to arrayOf(
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE,
-            Manifest.permission.READ_PHONE_STATE,
-            Manifest.permission.ACCESS_COARSE_LOCATION,
-            Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.CAMERA
         ),
+
         "com.ruihu.localtransfer.ui.activity.MainActivity" to arrayOf(
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
-            Manifest.permission.READ_PHONE_STATE,
-            Manifest.permission.ACCESS_COARSE_LOCATION,
-            Manifest.permission.ACCESS_FINE_LOCATION
+            Manifest.permission.READ_EXTERNAL_STORAGE,
         ),
     ) }
+
+    protected val permissions by lazy { permissionMap[this.javaClass.name]!! }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -100,7 +94,7 @@ abstract class BaseActivity : AppCompatActivity() {
             handler.postDelayed({ isExit = false }, 1000 * 2) //x秒后没按就取消
         } else {
             finish()
-            System.exit(0)
+            exitProcess(0)
         }
     }
 }
