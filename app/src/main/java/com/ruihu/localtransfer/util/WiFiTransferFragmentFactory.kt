@@ -1,15 +1,14 @@
 package com.ruihu.localtransfer.util
 
-import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.ruihu.localtransfer.ui.fragment.*
+import com.ruihu.rh_base.util.Constants
 
 /**
  *  Created By RuiHu At 2020/9/21 13:58
  */
 object WiFiTransferFragmentFactory {
 
-    // private static Object mutex = new Object();
     fun newInstance(string: String): Fragment? {
         var newFragment: Fragment? = null
         when (string) {
@@ -29,9 +28,6 @@ object WiFiTransferFragmentFactory {
                 newFragment = HistoryFragment()
             }
         }
-        val bundle = Bundle()
-        bundle.putString("param", string)
-        newFragment!!.arguments = bundle
         return newFragment
     }
 }

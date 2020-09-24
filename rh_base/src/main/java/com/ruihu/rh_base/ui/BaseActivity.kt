@@ -9,10 +9,10 @@ import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
+import com.ruihu.rh_base.util.Constants
 import org.jetbrains.anko.startActivity
 import org.jetbrains.anko.toast
 import kotlin.system.exitProcess
-
 
 /**
  *  Created By RuiHu At 2020/9/10 11:20
@@ -22,16 +22,18 @@ abstract class BaseActivity : AppCompatActivity() {
     private var isExit: Boolean = false
 
     private val permissionMap  by lazy { hashMapOf(
-        "com.ruihu.localtransfer.ui.activity.CreateOrModifyUserActivity" to arrayOf(
+
+        Constants.CREATEORMODIFYUSERACTIVITY to arrayOf(
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.CAMERA
         ),
 
-        "com.ruihu.localtransfer.ui.activity.MainActivity" to arrayOf(
+        Constants.MAINACTIVITY to arrayOf(
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.READ_EXTERNAL_STORAGE,
         ),
+
     ) }
 
     protected val permissions by lazy { permissionMap[this.javaClass.name]!! }

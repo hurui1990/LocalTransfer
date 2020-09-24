@@ -1,9 +1,12 @@
-package com.ruihu.localtransfer.util
+package com.ruihu.rh_base.util
 
 /**
  *  Created By RuiHu At 2020/9/16 17:57
  */
 object Constants {
+
+    const val MAINACTIVITY = "com.ruihu.localtransfer.ui.activity.MainActivity"
+    const val CREATEORMODIFYUSERACTIVITY = "com.ruihu.localtransfer.ui.activity.CreateOrModifyUserActivity"
 
     const val REQUEST_CODE_FOR_CAMERA = 0
     const val REQUEST_CODE_FOR_GALLERY = 1

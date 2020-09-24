@@ -23,7 +23,7 @@ import com.ruihu.localtransfer.R
 import com.ruihu.localtransfer.`interface`.OnAdapterClickListener
 import com.ruihu.localtransfer.adapter.ChooseAvaterAdapter
 import com.ruihu.localtransfer.bean.User
-import com.ruihu.localtransfer.util.Constants
+import com.ruihu.rh_base.util.Constants
 import com.ruihu.localtransfer.util.SharePreferenceDelegate
 import com.ruihu.rh_base.ui.BaseActivity
 import com.ruihu.rh_base.util.PermissionUtil

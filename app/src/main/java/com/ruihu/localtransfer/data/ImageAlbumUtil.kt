@@ -3,7 +3,7 @@ package com.ruihu.localtransfer.data
 import android.content.Context
 import android.provider.MediaStore
 import com.ruihu.localtransfer.bean.PhotoInfo
-import com.ruihu.localtransfer.util.Constants
+import com.ruihu.rh_base.util.Constants
 import java.io.File
 import java.util.*
 

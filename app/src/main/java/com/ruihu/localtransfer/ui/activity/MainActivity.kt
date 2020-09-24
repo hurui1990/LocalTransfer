@@ -9,14 +9,13 @@ import com.google.gson.Gson
 import com.ruihu.localtransfer.R
 import com.ruihu.localtransfer.adapter.WiFiTransferFragmentPagerAdapter
 import com.ruihu.localtransfer.bean.User
-import com.ruihu.localtransfer.util.Constants
+import com.ruihu.rh_base.util.Constants
 import com.ruihu.localtransfer.util.SharePreferenceDelegate
 import com.ruihu.localtransfer.util.WiFiTransferFragmentFactory
 import com.ruihu.rh_base.ui.BaseActivity
 import com.ruihu.rh_kit.extend.fromJson
 import com.ruihu.rh_kit.extend.toOvalBitmap
 import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.cameraManager
 import org.jetbrains.anko.imageResource
 
 class MainActivity : BaseActivity(), View.OnClickListener {
